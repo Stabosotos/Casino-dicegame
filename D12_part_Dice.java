@@ -12,8 +12,13 @@ public class D12_part_Dice {
         System.out.println("Welcome to the totally legal Dice Game!");
         System.out.println("_______________________________________");
 
+        String choice = "";
 
-        while (balance > 1) {
+        do {
+            if (balance < 1) {
+                System.out.println("*** ERROR, not enough balance to start the game!");
+                break;
+            }
 
             System.out.print("Please enter your bet (Balance: $" + balance + "): $");
             int bet = input.nextInt();
@@ -37,12 +42,10 @@ public class D12_part_Dice {
                 }
             }
             System.out.print("Roll again? (y/n) ");
-            String choice = input.next();
-        }
+            choice = input.next();
+        } while (balance > 1 && choice == "y");
         // Τσεκαρισμα το balance
-        if (balance < 1) {
-            System.out.println("*** ERROR, not enough balance to start the game!");
-        }
+
 
     }
 

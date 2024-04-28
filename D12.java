@@ -49,8 +49,11 @@ public class D12 {
                     D12_part_Dice game = new D12_part_Dice();
                     game.diceGame(balance);
                     break;
+                case "x":
+                    System.out.println("Hope you had fun!");
+                    break;
             }
-        } while (choice.equals("d") || choice.equals("w") || choice.equals("b"));
+        } while (choice.equals("d") || choice.equals("w") || choice.equals("g"));
 
 
     }
